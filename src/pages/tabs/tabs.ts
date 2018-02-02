@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
 import { FormularioPage } from '../formulario/formulario';
 import { AprovacaoPage } from '../aprovacao/aprovacao';
+import { NoeProvider } from '../../providers/noe/noe';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -13,7 +14,7 @@ export class TabsPage {
   tab3Root = AprovacaoPage;
   
 
-  constructor() {
+  constructor(public noe: NoeProvider) {
 
   }
 }

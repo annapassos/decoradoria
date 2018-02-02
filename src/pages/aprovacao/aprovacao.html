@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="azuldecor">
     <ion-title> Aprovação</ion-title>
   </ion-navbar>
 
@@ -19,7 +19,7 @@
     <div *ngFor="let item of noe.orcamentos">
       <ion-list-header>
         {{item.titulo}}
-      </ion-list-header>   
+      </ion-list-header>
 
       <ion-item *ngFor="let opcao of item.opcoes">
         <ion-label><img src="{{opcao.foto}}"></ion-label>
@@ -28,10 +28,5 @@
         <ion-radio></ion-radio>
       </ion-item>
     </div>
-  
+
   </ion-list>
-
-
-
-
-
