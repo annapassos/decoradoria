@@ -5,14 +5,21 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list *ngIf="noe">
-      <ion-item *ngFor="let item of noe.itens">
-        <ion-thumbnail item-start>
-          <img src= "{{item.foto}}">
-        </ion-thumbnail>
-        <h2>{{item.nome}} - {{item.marca}}</h2>
-        <h2>{{item.preco}}</h2>
-        <h2>{{item.descricao}}</h2>
-      </ion-item>
-  </ion-list>
+
+  <h1 class = bemVindo>Bem vindo a </h1>
+
+  <img class = imagemDecoradoria
+    src="https://decoradoria.com/wp-content/uploads/2017/10/logo-top.png"
+>
+
+    <ion-list *ngIf="noe">
+        <ion-item *ngFor="let item of noe.itens">
+          <ion-thumbnail item-start>
+            <img src= "{{item.foto}}">
+          </ion-thumbnail>
+          <h2>{{item.nome}} - {{item.marca}}</h2>
+          <h2>{{item.preco}}</h2>
+          <h2>{{item.descricao}}</h2>
+        </ion-item>
+    </ion-list>
 </ion-content>
