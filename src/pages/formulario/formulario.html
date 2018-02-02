@@ -15,48 +15,57 @@
 
 <ion-content padding>
     <ion-list>
-
       <ion-item>
-        <ion-label color="primary" fixed>Tipo</ion-label>
-        <ion-input [(ngModel)]="dados.tipo"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label color="primary" fixed>Marca</ion-label>
-        <ion-input [(ngModel)]="dados.marca"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label color="primary" fixed>Nome</ion-label>
-        <ion-input [(ngModel)]="dados.nome"></ion-input>
+        <ion-label>Tipo</ion-label>
+        <ion-select [(ngModel)]="dados.tipo">
+          <ion-option value="cadeira">Cadeira</ion-option>
+          <ion-option value="poltrona">Poltrona</ion-option>
+          <ion-option value="sofa">Sofá</ion-option>
+          <ion-option value="banco">Banco</ion-option>
+          <ion-option value="mesaDeJantar">Mesa de Jantar</ion-option>
+          <ion-option value="mesaLateral">Mesa Lateral</ion-option>
+          <ion-option value="mesaDeCentro">Mesa de Centro</ion-option>
+          <ion-option value="estante">Estante</ion-option> 
+        </ion-select>
       </ion-item>
 
-      <ion-item>
-        <ion-label color="primary" fixed>Quantidade</ion-label>
-        <ion-input [(ngModel)]="dados.quantidade"></ion-input>
-      </ion-item>
 
-      <ion-item>
-        <ion-label color="primary" fixed>Preço Unitário</ion-label>
-        <ion-input [(ngModel)]="dados.preco"></ion-input>
-      </ion-item>
+            <ion-item>
+              <ion-label color="primary" fixed>Marca</ion-label>
+              <ion-input [(ngModel)]="dados.marca"></ion-input>
+            </ion-item>
 
-      <ion-item>
-        <ion-label color="primary" fixed>Valor Total</ion-label>
-        <ion-input [(ngModel)]="dados.valorTotal"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="primary" fixed>Descrição</ion-label>
-        <ion-input [(ngModel)]="dados.descricao"></ion-input>
-      </ion-item>
+            <ion-item>
+              <ion-label color="primary" fixed>Nome</ion-label>
+              <ion-input [(ngModel)]="dados.nome"></ion-input>
+            </ion-item>
 
-      <ion-item>
-        <ion-label color="primary" fixed>Foto</ion-label>
-        <ion-input [(ngModel)]="dados.foto"></ion-input>
-      </ion-item>
+            <ion-item>
+              <ion-label color="primary" fixed>Quantidade</ion-label>
+              <ion-input [(ngModel)]="dados.quantidade"></ion-input>
+            </ion-item>
 
-    </ion-list>
-  
-    <button ion-button (click)="inserirFormulario()">Salvar</button>
-  </ion-content>
+            <ion-item>
+              <ion-label color="primary" fixed>Preço Unitário</ion-label>
+              <ion-input [(ngModel)]="dados.preco"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" fixed>Valor Total</ion-label>
+              <ion-input [(ngModel)]="dados.valorTotal"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" fixed>Descrição</ion-label>
+              <ion-input [(ngModel)]="dados.descricao"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" fixed>Foto</ion-label>
+              <ion-input [(ngModel)]="dados.foto"></ion-input>
+            </ion-item>
+
+          </ion-list>
+
+          <button ion-button (click)="inserirFormulario()">Salvar</button>
+        </ion-content>
