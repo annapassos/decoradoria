@@ -11,9 +11,22 @@ import { Injectable } from '@angular/core';
 export class NoeProvider {
   itens = [];
 
+  aprovados = [];
+
+  acesso = false;
+
   inserirItensServico(item){
    this.itens.push(item);
    console.log(this.itens);  
+ }
+
+ inserirAprovado(aprovado){
+   this.aprovados.push(aprovado);
+   console.log(this.aprovados)
+ }
+
+ acessoPermitido(){
+  this.acesso = true;
  }
 
 }

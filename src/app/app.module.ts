@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FormsModule } from '@angular/forms';
 import { NoeProvider } from '../providers/noe/noe';
 import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
    
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
     MyApp,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+  LoginPage
   ],
   providers: [
     StatusBar,
