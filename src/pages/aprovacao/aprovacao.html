@@ -22,6 +22,7 @@
       </ion-list-header>
 
       <ion-item *ngFor="let opcao of item.opcoes">
+        <ion-label><img src="{{opcao.foto}}"></ion-label>
         <ion-label>{{opcao.nome}}</ion-label>
         <ion-label>R${{opcao.preco*opcao.quantidade}},00</ion-label>
         <ion-radio></ion-radio>
