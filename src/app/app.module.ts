@@ -4,7 +4,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FormularioPageModule } from '../pages/formulario/formulario.module';
@@ -18,8 +17,6 @@ import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
 @NgModule({
   declarations: [
     MyApp,
-   
-    ContactPage,
     HomePage,
     TabsPage
   ],
@@ -34,7 +31,6 @@ import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ContactPage,
     HomePage,
     TabsPage
   ],

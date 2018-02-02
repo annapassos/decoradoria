@@ -17,6 +17,10 @@ export class NoeProvider {
     }
   ];
 
+  constructor(){
+    this.orcamentos = JSON.parse(localStorage.getItem('dados'));
+  }
+
   // orcamentos[i]
 
   inserirItensServico(item){
@@ -39,17 +43,18 @@ export class NoeProvider {
       this.orcamentos.push({titulo: "", opcoes: []});      
       this.orcamentos[this.orcamentos.length-1].opcoes.push(this.itens[this.itens.length-1]);
       this.orcamentos[this.orcamentos.length-1].titulo = this.itens[this.itens.length-1].tipo;
-      }
+    }
     
     else if ((tipoExistente === false) && (this.orcamentos[0].titulo === "")){
       this.orcamentos[0].opcoes.push(this.itens[this.itens.length-1]);
       this.orcamentos[0].titulo = this.itens[this.itens.length-1].tipo;
     }
     console.log("orcamentos =");
-    console.log(this.orcamentos)
+    console.log(this.orcamentos);
+
+    localStorage.setItem('dados', JSON.stringify(this.orcamentos));
   }
-  
-  }
+}
   
 
 
