@@ -14,13 +14,15 @@ import { FormsModule } from '@angular/forms';
 import { NoeProvider } from '../providers/noe/noe';
 import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
 import { LoginPage } from '../pages/login/login';
+import { DetalhePage } from '../pages/detalhe/detalhe';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    DetalhePage
   ],
   imports: [
     BrowserModule,
@@ -28,14 +30,14 @@ import { LoginPage } from '../pages/login/login';
     FormularioPageModule,
     FormsModule,
     AprovacaoPageModule
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     TabsPage,
-  LoginPage
+    LoginPage,
+    DetalhePage
   ],
   providers: [
     StatusBar,

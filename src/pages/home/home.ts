@@ -10,10 +10,11 @@ import { LoginPage } from '../login/login';
 export class HomePage {
 
   constructor(public navCtrl: NavController, public noe: NoeProvider) {
-    noe.itens
-    setTimeout(() => {
-      this.navCtrl.push(LoginPage)
-    }, 2000);
+
+  }
+
+  irParaLogin(){
+    this.navCtrl.push(LoginPage);
   }
 
 

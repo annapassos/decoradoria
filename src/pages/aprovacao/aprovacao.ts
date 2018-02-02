@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NoeProvider } from '../../providers/noe/noe';
+import { DetalhePage } from '../detalhe/detalhe';
 
 
 /**
@@ -23,6 +24,14 @@ export class AprovacaoPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AprovacaoPage');
+  }
+
+  irParaDetalhe (opcao){
+    let parametros = {
+      opcaoQueFoiClicado: opcao
+    };
+
+    this.navCtrl.push(DetalhePage, parametros );
   }
 
 }

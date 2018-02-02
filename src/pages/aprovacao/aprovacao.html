@@ -22,10 +22,13 @@
       </ion-list-header>
 
       <ion-item *ngFor="let opcao of item.opcoes">
-        <ion-label><img src="{{opcao.foto}}"></ion-label>
+        <ion-label><img src="{{opcao.foto}}">
+          <<ion-item> </ion-item>
+        </ion-label>
         <ion-label>{{opcao.nome}}</ion-label>
         <ion-label>R${{opcao.preco*opcao.quantidade}},00</ion-label>
         <ion-radio></ion-radio>
+            <button ion-button clear item-end (click)='irParaDetalhe(opcao)'>Ver</button>
       </ion-item>
     </div>
 
