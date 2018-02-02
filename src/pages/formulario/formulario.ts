@@ -22,12 +22,10 @@ export class FormularioPage {
     preco: '',
     quantidade: '',
     descricao:'',
-    valorTotal:'',
     foto:''
   };
-
-  constructor(public navCtrl: NavController, 
-    public navParams: NavParams, 
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
     public noe: NoeProvider) {
   }
 
@@ -43,9 +41,7 @@ export class FormularioPage {
     preco: '',
     descricao:'',
     quantidade: '',
-    valorTotal:'',
     foto:''
     }
   }
 }
-

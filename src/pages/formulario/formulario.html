@@ -1,8 +1,8 @@
 <!--
-  Generated template for the FormularioPage page.
+Generated template for the FormularioPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
+See http://ionicframework.com/docs/components/#navigation for more info on
+Ionic pages and navigation.
 -->
 <ion-header>
 
@@ -14,58 +14,55 @@
 
 
 <ion-content padding>
-    <ion-list>
-      <ion-item>
-        <ion-label>Tipo</ion-label>
-        <ion-select [(ngModel)]="dados.tipo">
-          <ion-option value="cadeira">Cadeira</ion-option>
-          <ion-option value="poltrona">Poltrona</ion-option>
-          <ion-option value="sofa">Sofá</ion-option>
-          <ion-option value="banco">Banco</ion-option>
-          <ion-option value="mesaDeJantar">Mesa de Jantar</ion-option>
-          <ion-option value="mesaLateral">Mesa Lateral</ion-option>
-          <ion-option value="mesaDeCentro">Mesa de Centro</ion-option>
-          <ion-option value="estante">Estante</ion-option>
-        </ion-select>
-      </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select [(ngModel)]="dados.tipo">
+        <ion-option value="cadeira">Cadeira</ion-option>
+        <ion-option value="poltrona">Poltrona</ion-option>
+        <ion-option value="sofa">Sofá</ion-option>
+        <ion-option value="banco">Banco</ion-option>
+        <ion-option value="mesaDeJantar">Mesa de Jantar</ion-option>
+        <ion-option value="mesaLateral">Mesa Lateral</ion-option>
+        <ion-option value="mesaDeCentro">Mesa de Centro</ion-option>
+        <ion-option value="estante">Estante</ion-option>
+      </ion-select>
+    </ion-item>
 
 
-            <ion-item>
-              <ion-label color="" fixed>Marca</ion-label>
-              <ion-input [(ngModel)]="dados.marca"></ion-input>
-            </ion-item>
+    <ion-item>
+      <ion-label color="" fixed>Marca</ion-label>
+      <ion-input [(ngModel)]="dados.marca"></ion-input>
+    </ion-item>
 
-            <ion-item>
-              <ion-label color="" fixed>Nome</ion-label>
-              <ion-input [(ngModel)]="dados.nome"></ion-input>
-            </ion-item>
+    <ion-item>
+      <ion-label color="" fixed>Nome</ion-label>
+      <ion-input [(ngModel)]="dados.nome"></ion-input>
+    </ion-item>
 
-            <ion-item>
-              <ion-label color="" fixed>Quantidade</ion-label>
-              <ion-input [(ngModel)]="dados.quantidade"></ion-input>
-            </ion-item>
+    <ion-item>
+      <ion-label color="" fixed>Quantidade</ion-label>
+      <ion-input [(ngModel)]="dados.quantidade"></ion-input>
+    </ion-item>
 
-            <ion-item>
-              <ion-label color="" fixed>Preço Unitário</ion-label>
-              <ion-input [(ngModel)]="dados.preco"></ion-input>
-            </ion-item>
+    <ion-item>
+      <ion-label color="" fixed>Preço Und</ion-label>
+      <ion-input [(ngModel)]="dados.preco"></ion-input>
+    </ion-item>
 
-            <ion-item>
-              <ion-label color="" fixed>Valor Total</ion-label>
-              <ion-input [(ngModel)]="dados.valorTotal"></ion-input>
-            </ion-item>
 
-            <ion-item>
-              <ion-label color="" fixed>Descrição</ion-label>
-              <ion-input [(ngModel)]="dados.descricao"></ion-input>
-            </ion-item>
 
-            <ion-item>
-              <ion-label color="" fixed>Foto</ion-label>
-              <ion-input [(ngModel)]="dados.foto"></ion-input>
-            </ion-item>
+    <ion-item>
+      <ion-label color="" fixed>Descrição</ion-label>
+      <ion-input [(ngModel)]="dados.descricao"></ion-input>
+    </ion-item>
 
-          </ion-list>
+    <ion-item>
+      <ion-label color="" fixed>Foto</ion-label>
+      <ion-input [(ngModel)]="dados.foto"></ion-input>
+    </ion-item>
 
-          <button color="azuldecor" ion-button (click)="inserirFormulario()">Salvar</button>
-        </ion-content>
+  </ion-list>
+
+  <button color="azuldecor" ion-button (click)="inserirFormulario()">Salvar</button>
+</ion-content>
