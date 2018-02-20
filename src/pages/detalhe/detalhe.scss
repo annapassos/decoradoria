@@ -1,20 +1,18 @@
 page-detalhe {
 
-.content-md{
-    background-color: rgb(218, 130, 58)
-    
-}
-
 div {
     img {
         width: 100%;
     }
 }
-
+.card-md {
+  margin-top: 2em;
+}
 
 .card-background-page {
 
     ion-card {
+
       position: relative;
       text-align: center;
     }

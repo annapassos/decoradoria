@@ -25,7 +25,7 @@ export class DetalhePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetalhePage');
-    console.log(this.opcaoQueFoiClicado)
+    console.log(this.opcao)
   }
 
 }

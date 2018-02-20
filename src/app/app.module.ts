@@ -14,7 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { NoeProvider } from '../providers/noe/noe';
 import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
 import { LoginPage } from '../pages/login/login';
-import { DetalhePage } from '../pages/detalhe/detalhe';
+import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
+
 
 @NgModule({
   declarations: [
@@ -22,14 +23,15 @@ import { DetalhePage } from '../pages/detalhe/detalhe';
     HomePage,
     TabsPage,
     LoginPage,
-    DetalhePage
+  
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     FormularioPageModule,
     FormsModule,
-    AprovacaoPageModule
+    AprovacaoPageModule,
+    DetalhePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +39,6 @@ import { DetalhePage } from '../pages/detalhe/detalhe';
     HomePage,
     TabsPage,
     LoginPage,
-    DetalhePage
   ],
   providers: [
     StatusBar,
