@@ -16,6 +16,7 @@ import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
 import { LoginPage } from '../pages/login/login';
 import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
 import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
+import { ChatPageModule } from '../pages/chat/chat.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,9 @@ import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
     HomePage,
     TabsPage,
     LoginPage,
+    // BeneficiosPage,
+    // ChatPage,
+
   
   ],
   imports: [
@@ -33,6 +37,7 @@ import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
     AprovacaoPageModule,
     DetalhePageModule,
     BeneficiosPageModule,
+    ChatPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
