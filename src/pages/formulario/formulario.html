@@ -37,37 +37,37 @@
 
     <ion-item>
       <ion-label color="" fixed>Marca</ion-label>
-      <ion-input [(ngModel)]="dados.marca"></ion-input>
+      <ion-input [(ngModel)]="dados.opcoes[0].marca"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="" fixed>Modelo</ion-label>
-      <ion-input [(ngModel)]="dados.modelo"></ion-input>
+      <ion-input [(ngModel)]="dados.opcoes[0].modelo"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="" fixed>Quantidade</ion-label>
-      <ion-input [(ngModel)]="dados.quantidade"></ion-input>
+      <ion-input [(ngModel)]="dados.opcoes[0].quantidade"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="" fixed>Preço Unit.</ion-label>
-      <ion-input [(ngModel)]="dados.preco"></ion-input>
+      <ion-input [(ngModel)]="dados.opcoes[0].preco"></ion-input>
     </ion-item>
 
     <ion-item>
-        <ion-label color="" fixed>Link para Compra</ion-label>
-        <ion-input [(ngModel)]="dados.link"></ion-input>
+        <ion-label color="" fixed>Link</ion-label>
+        <ion-input [(ngModel)]="dados.opcoes[0].link"></ion-input>
       </ion-item>
 
     <ion-item>
       <ion-label color="" fixed>Descrição</ion-label>
-      <ion-input [(ngModel)]="dados.descricao"></ion-input>
+      <ion-input [(ngModel)]="dados.opcoes[0].descricao"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="" fixed>Foto</ion-label>
-      <ion-input [(ngModel)]="dados.foto"></ion-input>
+      <ion-input [(ngModel)]="dados.opcoes[0].foto"></ion-input>
     </ion-item>
 
   </ion-list>

@@ -21,13 +21,21 @@ export class FormularioPage {
     clienteId: '',
     ambiente: '',
     tipo: '',
-    marca: '',
-    modelo: '',
-    quantidade: '',
-    link:'',
-    descricao:'',
-    foto: ''
-  };
+    opcoes: 
+      [
+        {
+          marca: '',
+          modelo: '',
+          quantidade: '',
+          preco: '',
+          link:'',
+          descricao:'',
+          foto: '',
+          aprovado: false
+        }
+      ]
+    }
+           
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -54,12 +62,19 @@ export class FormularioPage {
       clienteId: '',
       ambiente: '',
       tipo: '',
-      marca: '',
-      modelo: '',
-      quantidade: '',
-      link:'',
-      descricao:'',
-      foto: ''
-    }
+      opcoes: 
+        [
+          {
+            marca: '',
+            modelo: '',
+            quantidade: '',
+            preco: '',
+            link:'',
+            descricao:'',
+            foto: '',
+            aprovado: false
+          }
+        ]
+      } 
   }
 }

@@ -18,6 +18,7 @@ import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -33,7 +34,7 @@ import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
     FormsModule,
     AprovacaoPageModule,
     DetalhePageModule,
-    HttpClientModule
+    HttpClientModule,
     BeneficiosPageModule,
   ],
   bootstrap: [IonicApp],
