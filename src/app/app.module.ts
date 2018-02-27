@@ -15,6 +15,7 @@ import { NoeProvider } from '../providers/noe/noe';
 import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
 import { LoginPage } from '../pages/login/login';
 import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
     FormularioPageModule,
     FormsModule,
     AprovacaoPageModule,
-    DetalhePageModule
+    DetalhePageModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

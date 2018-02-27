@@ -7,28 +7,33 @@
 <ion-header>
 
   <ion-navbar color="azuldecor" *ngIf="noe.acesso"> <!--acesso vem de noe.acesso -->
-    <ion-title>Inclusão</ion-title>
+    <ion-title>Inclusão de Itens de Decoração</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
   <ion-list>
     <ion-item>
-      <ion-label>Tipo</ion-label>
-      <ion-select [(ngModel)]="dados.tipo">
-        <ion-option value="cadeira">Cadeira</ion-option>
-        <ion-option value="poltrona">Poltrona</ion-option>
-        <ion-option value="sofa">Sofá</ion-option>
-        <ion-option value="banco">Banco</ion-option>
-        <ion-option value="mesaDeJantar">Mesa de Jantar</ion-option>
-        <ion-option value="mesaLateral">Mesa Lateral</ion-option>
-        <ion-option value="mesaDeCentro">Mesa de Centro</ion-option>
-        <ion-option value="estante">Estante</ion-option>
+      <ion-label>Cliente</ion-label>
+      <ion-select [(ngModel)]="dados.clienteId">
+        <ion-option *ngFor="let cliente of clientes" [value]="cliente._id">
+          {{cliente.nome}}
+        </ion-option>
       </ion-select>
     </ion-item>
 
+    <ion-item>
+        <ion-label color="" fixed>Ambiente</ion-label>
+        <ion-input [(ngModel)]="dados.ambiente"></ion-input>
+      </ion-item>
+
+    <ion-item>
+        <ion-label color="" fixed>Tipo</ion-label>
+        <ion-input [(ngModel)]="dados.tipo"></ion-input>
+      </ion-item>
 
     <ion-item>
       <ion-label color="" fixed>Marca</ion-label>
@@ -36,8 +41,8 @@
     </ion-item>
 
     <ion-item>
-      <ion-label color="" fixed>Nome</ion-label>
-      <ion-input [(ngModel)]="dados.nome"></ion-input>
+      <ion-label color="" fixed>Modelo</ion-label>
+      <ion-input [(ngModel)]="dados.modelo"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -50,7 +55,10 @@
       <ion-input [(ngModel)]="dados.preco"></ion-input>
     </ion-item>
 
-
+    <ion-item>
+        <ion-label color="" fixed>Link para Compra</ion-label>
+        <ion-input [(ngModel)]="dados.link"></ion-input>
+      </ion-item>
 
     <ion-item>
       <ion-label color="" fixed>Descrição</ion-label>

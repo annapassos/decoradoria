@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NoeProvider } from '../../providers/noe/noe';
+import { HttpClient } from '@angular/common/http';
 
 /**
  * Generated class for the FormularioPage page.
@@ -15,33 +16,50 @@ import { NoeProvider } from '../../providers/noe/noe';
   templateUrl: 'formulario.html',
 })
 export class FormularioPage {
+  clientes;
   dados = {
+    clienteId: '',
+    ambiente: '',
     tipo: '',
     marca: '',
-    nome: '',
-    preco: '',
+    modelo: '',
     quantidade: '',
+    link:'',
     descricao:'',
-    foto:''
+    foto: ''
   };
+
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public noe: NoeProvider) {
+    public noe: NoeProvider,
+    public http: HttpClient) {
+      this.http.get('http://localhost:3001/apiclientes').subscribe(
+      (cadastro) => {
+        this.clientes = cadastro;
+        console.log(cadastro)
+      }
+    )
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FormularioPage');
   }
 
   inserirFormulario(){
-    this.noe.inserirItensServico(this.dados);
-    this.dados = {tipo: '',
-    marca: '',
-    nome: '',
-    preco: '',
-    descricao:'',
-    quantidade: '',
-    foto:''
+    this.http.post('http://localhost:3001/apiitens', this.dados).subscribe(() => {
+      alert('Os dados foram salvos!');
+    });
+    this.dados = {
+      clienteId: '',
+      ambiente: '',
+      tipo: '',
+      marca: '',
+      modelo: '',
+      quantidade: '',
+      link:'',
+      descricao:'',
+      foto: ''
     }
   }
 }
