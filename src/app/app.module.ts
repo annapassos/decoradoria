@@ -17,6 +17,8 @@ import { LoginPage } from '../pages/login/login';
 import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
+import { ChatPageModule } from '../pages/chat/chat.module';
+import { AprovadosPageModule } from '../pages/aprovados/aprovados.module';
 
 
 @NgModule({
@@ -25,6 +27,9 @@ import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
     HomePage,
     TabsPage,
     LoginPage,
+    // BeneficiosPage,
+    // ChatPage,
+
   
   ],
   imports: [
@@ -36,6 +41,8 @@ import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
     DetalhePageModule,
     HttpClientModule,
     BeneficiosPageModule,
+    ChatPageModule,
+    AprovadosPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

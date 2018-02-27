@@ -18,7 +18,7 @@
 <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
   <ion-list>
-    <ion-item text-wrap *ngFor="let item of items">
+    <ion-item text-wrap *ngFor="let item of itensselecionados">
       <ion-thumbnail item-start>
         <img src="{{item.imagem}}">
       </ion-thumbnail>

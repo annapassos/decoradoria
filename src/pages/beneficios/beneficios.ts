@@ -16,10 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class BeneficiosPage {
 
   searchQuery: '';
-  items: {};
+  items;
+  itensselecionados= [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.initializeItems();
+    this.itensselecionados = this.items;
   }
 
 
@@ -119,6 +121,7 @@ export class BeneficiosPage {
     ]
   }
 
+<<<<<<< HEAD
 //   getItems(ev: any) {
 //     // Reset items back to all of the items
 //     this.initializeItems();
@@ -133,6 +136,26 @@ export class BeneficiosPage {
 //       })
 //     }
 //   }
+=======
+
+
+
+
+// VERIFICAR COMO FAZER LETRA MAIUSCULA E MINUSCULA
+
+  getItems(ev: any) {
+    if (ev.target.value == ""){
+      this.itensselecionados = this.items;
+    } else {
+      this.itensselecionados=[];
+      for(let item of this.items){
+        if (item.nome.search(ev.target.value)>=0){
+          this.itensselecionados.push(item);
+        }
+      }
+    }
+  }
+>>>>>>> 605753f0a53ca4c00db21557f9b3527efc007752
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BeneficiosPage');
