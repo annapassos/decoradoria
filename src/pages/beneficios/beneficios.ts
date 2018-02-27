@@ -16,10 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class BeneficiosPage {
 
   searchQuery: '';
-  items: {};
+  items;
+  itensselecionados= [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.initializeItems();
+    this.itensselecionados = this.items;
   }
 
 
@@ -120,31 +122,23 @@ export class BeneficiosPage {
   }
 
 
-// VERIFICAR COMO FUNCIONA O SEARCH 
-
-  // getItems(ev: any) {
-  //   // Reset items back to all of the items
-  //   this.initializeItems();
-
-  //   // set val to the value of the searchbar
-  //   let val = ev.target.value;
 
 
 
+// VERIFICAR COMO FAZER LETRA MAIUSCULA E MINUSCULA
 
-
-    // if the value is an empty string don't filter the items
-
-    
-  //   if (val && val.trim() != '') {
-  //     this.items = this.items.filter((item) => {
-  //       return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-  //     })
-  //   }
-  // }
-
-
-
+  getItems(ev: any) {
+    if (ev.target.value == ""){
+      this.itensselecionados = this.items;
+    } else {
+      this.itensselecionados=[];
+      for(let item of this.items){
+        if (item.nome.search(ev.target.value)>=0){
+          this.itensselecionados.push(item);
+        }
+      }
+    }
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BeneficiosPage');
