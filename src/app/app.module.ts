@@ -15,6 +15,7 @@ import { NoeProvider } from '../providers/noe/noe';
 import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
 import { LoginPage } from '../pages/login/login';
 import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
+import { HttpClientModule } from '@angular/common/http';
 import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
 import { ChatPageModule } from '../pages/chat/chat.module';
 
@@ -36,6 +37,7 @@ import { ChatPageModule } from '../pages/chat/chat.module';
     FormsModule,
     AprovacaoPageModule,
     DetalhePageModule,
+    HttpClientModule
     BeneficiosPageModule,
     ChatPageModule,
   ],
