@@ -12,19 +12,24 @@
 
 </ion-header>
 
-<button ion-button icon-left>
-    <ion-icon name="Incluir Projeto"></ion-icon>
-    Left Icon
-  </button>
-  
-  <!-- Float the icon right -->
-  <button ion-button icon-left>
-    Left Icon
-    <ion-icon name="Incluir Produto"></ion-icon>
-  </button>
-  
-
-
 <ion-content padding>
+
+    <ion-content class="card-background-page">
+
+        <ion-card  (click)='irParaFormulario ()' class="space">
+          <img (click)='irParaFormulario' src="https://decoradoria.com/wp-content/uploads/2017/10/simulacao-sala_ana_decoradora-carla-pagliuca-1024x705.jpg"/>
+          <div class="card-title">Incluir Projeto</div>
+        </ion-card>
+      
+ 
+        <ion-card  (click)='irParaFormulario ()'>
+            <img src="https://www.tuacasa.com.br/wp-content/uploads/2017/01/cadeira-de-acrilico-2.jpg"/>
+            <div class="card-title">Incluir Produto</div>
+          </ion-card>
+
+      </ion-content>
+
+
+
 
 </ion-content>

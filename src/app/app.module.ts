@@ -19,12 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
 import { ChatPageModule } from '../pages/chat/chat.module';
 import { AprovadosPageModule } from '../pages/aprovados/aprovados.module';
-<<<<<<< HEAD
 import { MenuinclusaoPageModule } from '../pages/menuinclusao/menuinclusao.module';
-=======
 import { EditarPageModule } from '../pages/editar/editar.module';
 
->>>>>>> 256a1353d25d80221f2241b9497bb38a3ab559c0
 
 
 @NgModule({
@@ -49,11 +46,8 @@ import { EditarPageModule } from '../pages/editar/editar.module';
     BeneficiosPageModule,
     ChatPageModule,
     AprovadosPageModule,
-<<<<<<< HEAD
     MenuinclusaoPageModule,
-=======
     EditarPageModule
->>>>>>> 256a1353d25d80221f2241b9497bb38a3ab559c0
   ],
   
   bootstrap: [IonicApp],

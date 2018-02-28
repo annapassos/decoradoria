@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormularioPage } from '../formulario/formulario';
 
 /**
  * Generated class for the MenuinclusaoPage page.
@@ -21,5 +22,15 @@ export class MenuinclusaoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MenuinclusaoPage');
   }
+
+  irParaFormulario (){
+
+    this.navCtrl.push(FormularioPage);
+  }
+
+  // irParaFormuprojetos (){
+
+  //   this.navCtrl.push(FormprojetosPage);
+  // }
 
 }
