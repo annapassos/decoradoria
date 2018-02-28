@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { DetalhePage } from '../detalhe/detalhe';
 import { ComprasPage } from '../compras/compras';
+import { EditarPage } from '../editar/editar';
 
 /**
 * Generated class for the AprovadosPage page.
@@ -71,13 +72,13 @@ irParaDetalhe (opcao){
 }
 
 
-irParaCompras (opcao){
+irParaEditar (opcao){
   let parametros = {
     opcaoQueFoiClicado: opcao
   };
   
   
-  this.navCtrl.push(ComprasPage, parametros );
+  this.navCtrl.push(EditarPage, parametros );
 }
 
 ionViewDidLoad() {

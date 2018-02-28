@@ -18,7 +18,7 @@
   <ion-list>
     <ion-item>
       <ion-label>Cliente</ion-label>
-      <ion-select [(ngModel)]="dados.clienteId">
+      <ion-select [(ngModel)]="dados.clienteId" [(ngModel)]="dados.opcoes[0].clienteId">
         <ion-option *ngFor="let cliente of clientes" [value]="cliente._id">
           {{cliente.nome}}
         </ion-option>

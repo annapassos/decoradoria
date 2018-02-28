@@ -2,7 +2,19 @@ page-beneficios {
 
 }
 img{
-    object-fit: scale-down
-}
-
+    object-fit: scale-down;
+ }
+ 
+ h1{
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+ }
+ 
+ p{
+    margin-bottom: 10px !important;
+ }
+ 
+ .item-inner{
+    padding: 0 !important;
+ } 
 

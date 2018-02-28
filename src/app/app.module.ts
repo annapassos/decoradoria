@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
 import { ChatPageModule } from '../pages/chat/chat.module';
 import { AprovadosPageModule } from '../pages/aprovados/aprovados.module';
+import { EditarPageModule } from '../pages/editar/editar.module';
+
 
 
 @NgModule({
@@ -43,6 +45,7 @@ import { AprovadosPageModule } from '../pages/aprovados/aprovados.module';
     BeneficiosPageModule,
     ChatPageModule,
     AprovadosPageModule,
+    EditarPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
