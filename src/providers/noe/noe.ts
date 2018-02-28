@@ -9,20 +9,20 @@ and Angular DI.
 */
 @Injectable()
 export class NoeProvider {
-  itens = [];
-  orcamentos = [
-    {
-      titulo:"",
-      opcoes: []  
-    }
-  ];
+  // itens = [];
+  // orcamentos = [
+  //   {
+  //     titulo:"",
+  //     opcoes: []  
+  //   }
+  // ];
 
   constructor(){
-    let dados = localStorage.getItem('dados');
+    // let dados = localStorage.getItem('dados');
 
-    if(dados){
-      this.orcamentos = JSON.parse(dados);
-    }
+    // if(dados){
+    //   this.orcamentos = JSON.parse(dados);
+    // }
   }
 
   // orcamentos[i]
@@ -40,37 +40,37 @@ export class NoeProvider {
     this.acesso = true;
   }
   
-  inserirItensServico(item){
+//   inserirItensServico(item){
     
-    this.itens.push(item);
-    console.log("itens =");
-    console.log(this.itens);
+//     this.itens.push(item);
+//     console.log("itens =");
+//     console.log(this.itens);
     
-    let tipoExistente = false;
+//     let tipoExistente = false;
     
-    for (let i = 0; i < this.orcamentos.length; i++) {
+//     for (let i = 0; i < this.orcamentos.length; i++) {
       
-      if (this.itens[this.itens.length-1].tipo === this.orcamentos[i].titulo){
-        this.orcamentos[i].opcoes.push(this.itens[this.itens.length-1]); 
-        tipoExistente = true;
-      }
-    }
+//       if (this.itens[this.itens.length-1].tipo === this.orcamentos[i].titulo){
+//         this.orcamentos[i].opcoes.push(this.itens[this.itens.length-1]); 
+//         tipoExistente = true;
+//       }
+//     }
     
-    if ((tipoExistente === false) && (this.orcamentos[0].titulo !== "")){
-      this.orcamentos.push({titulo: "", opcoes: []});      
-      this.orcamentos[this.orcamentos.length-1].opcoes.push(this.itens[this.itens.length-1]);
-      this.orcamentos[this.orcamentos.length-1].titulo = this.itens[this.itens.length-1].tipo;
-    }
+//     if ((tipoExistente === false) && (this.orcamentos[0].titulo !== "")){
+//       this.orcamentos.push({titulo: "", opcoes: []});      
+//       this.orcamentos[this.orcamentos.length-1].opcoes.push(this.itens[this.itens.length-1]);
+//       this.orcamentos[this.orcamentos.length-1].titulo = this.itens[this.itens.length-1].tipo;
+//     }
     
-    else if ((tipoExistente === false) && (this.orcamentos[0].titulo === "")){
-      this.orcamentos[0].opcoes.push(this.itens[this.itens.length-1]);
-      this.orcamentos[0].titulo = this.itens[this.itens.length-1].tipo;
-    }
-    console.log("orcamentos =");
-    console.log(this.orcamentos);
+//     else if ((tipoExistente === false) && (this.orcamentos[0].titulo === "")){
+//       this.orcamentos[0].opcoes.push(this.itens[this.itens.length-1]);
+//       this.orcamentos[0].titulo = this.itens[this.itens.length-1].tipo;
+//     }
+//     console.log("orcamentos =");
+//     console.log(this.orcamentos);
 
-    localStorage.setItem('dados', JSON.stringify(this.orcamentos));
-  }
+//     localStorage.setItem('dados', JSON.stringify(this.orcamentos));
+//   }
 }
   
 

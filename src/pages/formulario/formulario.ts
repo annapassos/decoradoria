@@ -31,7 +31,9 @@ export class FormularioPage {
           link:'',
           descricao:'',
           foto: '',
-          aprovado: false
+          ambiente: '',
+          tipo: '',
+          status: 'analise'
         }
       ]
     }
@@ -72,7 +74,9 @@ export class FormularioPage {
             link:'',
             descricao:'',
             foto: '',
-            aprovado: false
+            ambiente:'',
+            tipo:'',
+            status: 'analise'
           }
         ]
       } 

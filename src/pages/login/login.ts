@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NoeProvider } from '../../providers/noe/noe';
-import { FormularioPage } from '../formulario/formulario';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the LoginPage page.
@@ -44,7 +44,7 @@ export class LoginPage {
   validaLogin(){
     if (this.userArquiteto.nome === this.userLogin.nome && this.userArquiteto.senha === this.userLogin.senha){
       this.noe.acessoPermitido();
-      this.navCtrl.push(FormularioPage);
+      this.navCtrl.push(TabsPage);
     }
     this.userLogin = {
       nome: "",

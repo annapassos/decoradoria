@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
+import { DetalhePage } from '../detalhe/detalhe';
+import { ComprasPage } from '../compras/compras';
 
 /**
- * Generated class for the AprovadosPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+* Generated class for the AprovadosPage page.
+*
+* See https://ionicframework.com/docs/components/#navigation for more info on
+* Ionic pages and navigation.
+*/
 
 @IonicPage()
 @Component({
@@ -14,30 +17,73 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'aprovados.html',
 })
 export class AprovadosPage {
+  itens;
+  clientes;
+  dados = {
+    clienteId: ''
+  };
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
+    
+    //   this.http.get('http://localhost:3001/apiitens').subscribe(
+    //   (res) => {
+    //     this.itens = res;
+    //   }
+    // )
+    
+    this.http.get('http://localhost:3001/apiclientes').subscribe((cadastro) => {
+    this.clientes = cadastro;
+  });
+}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+// buscar itens aprovados:
+
+
+buscarAprovados (opcao){
+  let busca = {
+    "clienteId": this.dados.clienteId,
+    "status": "aprovado"
   }
+  
+  this.http.post<any>('http://localhost:3001/itensaprovados', busca).subscribe((dados) => {
+    for(let item of dados){
+      for(let opcao of item.opcoes){
+        let preco = Number(opcao.preco.replace(',', '.'));
+        let valorTotal = preco * opcao.quantidade;
+
+        opcao.valorTotal = 'R$ ' + valorTotal.toFixed(2).replace('.',',');
+      }
+    }
+    
+    this.itens = dados;  
+    console.log(this.itens)
+  });
+}
 
 
-// // VERIFICAR FILTRA O QUE FOI APROVADO
-
-// getItems(ev: any) {
-//   if (ev.target.value == ""){
-//     this.itensselecionados = this.items;
-//   } else {
-//     this.itensselecionados=[];
-//     for(let item of this.items){
-//       if (item.nome.search(ev.target.value)>=0){
-//         this.itensselecionados.push(item);
-//       }
-//     }
-//   }
-// }
+irParaDetalhe (opcao){
+  let parametros = {
+    opcaoQueFoiClicado: opcao
+  };
+  
+  
+  this.navCtrl.push(DetalhePage, parametros );
+}
 
 
+irParaCompras (opcao){
+  let parametros = {
+    opcaoQueFoiClicado: opcao
+  };
+  
+  
+  this.navCtrl.push(ComprasPage, parametros );
+}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AprovadosPage');
-  }
+ionViewDidLoad() {
+  console.log('ionViewDidLoad AprovadosPage');
+}
 
 }
+
+

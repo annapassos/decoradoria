@@ -12,7 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FormsModule } from '@angular/forms';
 import { NoeProvider } from '../providers/noe/noe';
-import { AprovacaoPageModule } from '../pages/aprovacao/aprovacao.module';
+import { ComprasPageModule } from '../pages/compras/compras.module';
 import { LoginPage } from '../pages/login/login';
 import { DetalhePageModule } from '../pages/detalhe/detalhe.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -37,7 +37,7 @@ import { AprovadosPageModule } from '../pages/aprovados/aprovados.module';
     IonicModule.forRoot(MyApp),
     FormularioPageModule,
     FormsModule,
-    AprovacaoPageModule,
+    ComprasPageModule,
     DetalhePageModule,
     HttpClientModule,
     BeneficiosPageModule,
