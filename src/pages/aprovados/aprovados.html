@@ -16,7 +16,7 @@
 <ion-content padding>
   
   <ion-list>
-    <ion-item>
+    <ion-item class="titulo1">
       <ion-label>Cliente</ion-label>
       <ion-select [(ngModel)]="dados.clienteId" (ionChange)='buscarAprovados(opcao)'>
         <ion-option *ngFor="let cliente of clientes" [value]="cliente._id">
@@ -28,8 +28,8 @@
     <div *ngFor="let item of itens">
 
    
-        <ion-list-header class="titulo2" *ngFor="let opcao of item.opcoes">
-        {{opcao.ambiente}}
+        <ion-list-header *ngFor="let opcao of item.opcoes">     
+            {{opcao.ambiente}}
         </ion-list-header>
   
       <ion-item *ngFor="let opcao of item.opcoes">
@@ -37,7 +37,7 @@
         </ion-label>
         <ion-label> {{opcao.tipo}}</ion-label>
         <ion-label>{{opcao.valorTotal}}</ion-label>
-        <button ion-button clear item-end (click)='irParaCompras(opcao)'>Editar</button>
+        <button ion-button clear item-end (click)='irParaEditar(opcao)'>Editar</button>
       </ion-item>
     </div>
  

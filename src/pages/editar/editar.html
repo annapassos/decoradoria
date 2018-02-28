@@ -6,13 +6,31 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Editar</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+    <ion-navbar color="azuldecor">
+      <ion-title>Editar Itens Aprovados</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <ion-list radio-group>
+  
+      <div *ngFor="let item of itens">
+        
+        <ion-list-header class="titulo2">
+         {{item.ambiente}} > {{item.tipo}}
+        </ion-list-header>
+  
+    
+        <ion-item *ngFor="let opcao of item.opcoes">
+          <ion-label><img src="{{opcao.foto}}">
+          </ion-label>
+          <ion-label>{{opcao.modelo}}</ion-label>
+          <ion-label>{{opcao.valorTotal}}</ion-label>
+          <ion-radio  (click)="showConfirm(opcao)" ></ion-radio>
+              <button ion-button clear item-end (click)='irParaEditar(opcao)'>Ver</button>
+        </ion-item>
+      </div>
+  
+    </ion-list>

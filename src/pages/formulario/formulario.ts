@@ -31,6 +31,7 @@ export class FormularioPage {
           link:'',
           descricao:'',
           foto: '',
+          clienteId: '',
           ambiente: '',
           tipo: '',
           status: 'analise'
@@ -74,6 +75,7 @@ export class FormularioPage {
             link:'',
             descricao:'',
             foto: '',
+            clienteId: '',
             ambiente:'',
             tipo:'',
             status: 'analise'
