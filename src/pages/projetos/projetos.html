@@ -1,0 +1,36 @@
+<!--
+  Generated template for the ProjetosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="azuldecor">
+    <ion-title>Projetos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list radio-group>
+
+    <div *ngFor="let item of itens">
+      
+      <ion-list-header class="titulo2">
+       {{item.ambiente}} > {{item.tipo}}
+      </ion-list-header>
+
+  
+
+      <ion-item *ngFor="let opcao of item.opcoes">
+        <ion-label>Versão: {{opcao.versao}}</ion-label>
+        <ion-label class= imagem1><img src="{{opcao.foto}}">
+        </ion-label>
+        <ion-radio></ion-radio>
+            <!-- <button ion-button clear item-end (click)='irParaDetalhe(opcao)'>Ver</button> -->
+      </ion-item>
+    </div>
+
+  </ion-list>

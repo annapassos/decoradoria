@@ -1,0 +1,56 @@
+<!--
+  Generated template for the FormprojetosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="azuldecor" > <!--acesso vem de noe.acesso -->
+    <ion-title>Inclusão de Projetos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Cliente</ion-label>
+      <ion-select [(ngModel)]="dados.clienteId">
+        <ion-option *ngFor="let cliente of clientes" [value]="cliente._id">
+          {{cliente.nome}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="" fixed>Ambiente</ion-label>
+        <ion-input [(ngModel)]="dados.ambiente"></ion-input>
+      </ion-item>
+
+    <ion-item>
+        <ion-label color="" fixed>Tipo</ion-label>
+        <ion-input [(ngModel)]="dados.tipo"></ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-label color="" fixed>Versão</ion-label>
+      <ion-input [(ngModel)]="dados.opcoes[0].versao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="" fixed>Descrição</ion-label>
+      <ion-input [(ngModel)]="dados.opcoes[0].descricao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="" fixed>Foto</ion-label>
+      <ion-input [(ngModel)]="dados.opcoes[0].foto"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button color="azuldecor" ion-button (click)="inserirFormulario()">Salvar</button>
+</ion-content>
