@@ -121,7 +121,6 @@ export class BeneficiosPage {
     ]
   }
 
-<<<<<<< HEAD
 //   getItems(ev: any) {
 //     // Reset items back to all of the items
 //     this.initializeItems();
@@ -136,7 +135,6 @@ export class BeneficiosPage {
 //       })
 //     }
 //   }
-=======
 
 
 
@@ -155,7 +153,6 @@ export class BeneficiosPage {
       }
     }
   }
->>>>>>> 605753f0a53ca4c00db21557f9b3527efc007752
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BeneficiosPage');

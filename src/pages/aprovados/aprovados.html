@@ -14,30 +14,18 @@
 
 
 <ion-content padding>
+  <ion-content padding>
 
-    <!-- <ion-list *ngIf="noe" radio-group>
-
-        <div *ngFor="let item of noe.itensaprovados">
-          <ion-list-header class="titulo2">
-            {{item.titulo}}
-          </ion-list-header>
-    
-          <ion-item *ngFor="let opcao of item.opcoes">
-            <ion-label><img src="{{opcao.foto}}">
-              <ion-item> </ion-item>
-            </ion-label>
-            <ion-label>{{opcao.nome}}</ion-label>
-            <ion-label>R${{opcao.preco*opcao.quantidade}},00</ion-label>
-            <ion-radio></ion-radio>
-                <button ion-button clear item-end (click)='irParaDetalhe(opcao)'>Ver</button>
-          </ion-item>
-        </div>
-    
-      </ion-list> -->
-
-    <!-- <h1> Total Geral: </h1>  
-
-    <h2 *ngFor = "let opcao of item.opcoes.preco*quantidade"> R$ {{totalgeral}}</h2> --> 
-
-</ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Cliente</ion-label>
+        <ion-select [(ngModel)]="dados.clienteId">
+          <ion-option *ngFor="let cliente of clientes" [value]="cliente._id">
+            {{cliente.nome}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+  
+    </ion-list>
+  </ion-content>
 
