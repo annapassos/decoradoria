@@ -8,7 +8,7 @@ import { ChatPage } from '../chat/chat';
 import { AprovadosPage } from '../aprovados/aprovados';
 import { FormprojetosPage } from '../formprojetos/formprojetos';
 import { ProjetosPage } from '../projetos/projetos';
-
+import { MenuinclusaoPage } from '../menuinclusao/menuinclusao';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -16,12 +16,13 @@ import { ProjetosPage } from '../projetos/projetos';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = FormularioPage;
+  tab2Root = MenuinclusaoPage;
   tab3Root = ComprasPage;
   tab4Root = AprovadosPage; 
   tab5Root = ProjetosPage; 
   tab6Root = BeneficiosPage; 
   tab7Root = ChatPage; 
+
 
   constructor(public noe: NoeProvider) {
 

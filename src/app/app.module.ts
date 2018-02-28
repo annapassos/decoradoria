@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BeneficiosPageModule } from '../pages/beneficios/beneficios.module';
 import { ChatPageModule } from '../pages/chat/chat.module';
 import { AprovadosPageModule } from '../pages/aprovados/aprovados.module';
+import { MenuinclusaoPageModule } from '../pages/menuinclusao/menuinclusao.module';
 import { EditarPageModule } from '../pages/editar/editar.module';
 import { ProjetosPageModule } from '../pages/projetos/projetos.module';
 import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.module';
@@ -49,9 +50,11 @@ import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.modul
     AprovadosPageModule,
     EditarPageModule,
     ProjetosPageModule,
-    FormprojetosPageModule
-
+    FormprojetosPageModule,
+    MenuinclusaoPageModule,
+    EditarPageModule
   ],
+  
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
