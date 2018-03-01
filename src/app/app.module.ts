@@ -23,7 +23,18 @@ import { MenuinclusaoPageModule } from '../pages/menuinclusao/menuinclusao.modul
 import { EditarPageModule } from '../pages/editar/editar.module';
 import { ProjetosPageModule } from '../pages/projetos/projetos.module';
 import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.module';
+import { AngularFireModule } from "angularfire2";
+import { ChatPage } from '../pages/chat/chat';
 
+
+export const firebaseConfig ={
+    apiKey: "AIzaSyAN7pWFqWpVJIYv3HGEGyG4pS4HBr_GAM8",
+    authDomain: "chat-decoradoria.firebaseapp.com",
+    databaseURL: "https://chat-decoradoria.firebaseio.com",
+    projectId: "chat-decoradoria",
+    storageBucket: "chat-decoradoria.appspot.com",
+    messagingSenderId: "178141663922"
+  }
 
 
 @NgModule({
@@ -33,7 +44,7 @@ import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.modul
     TabsPage,
     LoginPage,
     // BeneficiosPage,
-    // ChatPage,
+    ChatPage,
 
   
   ],
@@ -52,7 +63,8 @@ import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.modul
     ProjetosPageModule,
     FormprojetosPageModule,
     MenuinclusaoPageModule,
-    EditarPageModule
+    EditarPageModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   
   bootstrap: [IonicApp],
@@ -61,6 +73,7 @@ import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.modul
     HomePage,
     TabsPage,
     LoginPage,
+    ChatPage,
   ],
   providers: [
     StatusBar,

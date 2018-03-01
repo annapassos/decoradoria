@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+
 
 /**
  * Generated class for the ChatPage page.
@@ -16,26 +18,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ChatPage {
 
   // para chat -copiado do medium.com
-  // lista: FirebaselistObservable <any>;
-  // mensagem: string;
+  lista: FirebaselistObservable <any>;
+  mensagem: string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public af: AngularFire) {
+    this.lista = af.database.list('https://chat-decoradoria.firebaseio.com/chat');
+  }
+
+  enviar(){
+    let m = {
+      texto: this.mensagem,
+      data: new Date()
+    };
+    this.lista.push(m). then (() => {
+      this.mensagem ="";
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatPage');
   }
-
-
-  // para chat -copiado do medium.com
-  // enviar(){
-  //   let m = {
-  //     texto: this.mensagem,
-  //     data: new Date()
-  //   };
-  //   this.lista.push(m). then (() => {
-  //     this.mensagem ="";
-  //   });
-  // }
 }
