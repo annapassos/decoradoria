@@ -48,6 +48,8 @@ buscarAprovados (opcao){
   
   this.http.post<any>('http://localhost:3001/itensaprovados', busca).subscribe((dados) => {
     for(let item of dados){
+      if(!item.opcoes) continue;
+      
       for(let opcao of item.opcoes){
         let preco = Number(opcao.preco.replace(',', '.'));
         let valorTotal = preco * opcao.quantidade;

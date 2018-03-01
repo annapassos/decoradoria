@@ -1,27 +1,32 @@
 page-login {
-    .bemVindo {
-        font-family: sans-serif;
-      }
-      .imagemDecoradoria {
-        width: 87%;
-        margin-left: 9%;
-        margin-top: 20%;
-        margin-bottom: 10%;
-      }
-      ion-content{
-        background-image: url("../assets/imgs/capa.jpg");
-        background-size: auto 100%;
+  .bemVindo {
+    font-family: sans-serif;
+  }
+  .imagemDecoradoria {
+    width: 80%;
+    margin-left: 9%;
+    margin-top: 30%;
+    margin-bottom: 25%;
+    object-fit: unset;
+  }
+  ion-content{
+    background-image: url("../assets/imgs/capa.jpg");
+    background-size: auto 100%;
     
-        .transparencia{
-          height: 100vh;
-          width: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          background-color: white;
-          opacity: 0.45;
-          z-index: -1;
-          // filter: alpha (opacity=65);
-        }
-      }
+    .transparencia{
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: white;
+      opacity: 0.45;
+      z-index: -1;
+      // filter: alpha (opacity=65);
+    }
+  }
+
+  .item-md{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
