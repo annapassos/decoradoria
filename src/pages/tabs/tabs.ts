@@ -6,6 +6,8 @@ import { NoeProvider } from '../../providers/noe/noe';
 import { BeneficiosPage } from '../beneficios/beneficios';
 import { ChatPage } from '../chat/chat';
 import { AprovadosPage } from '../aprovados/aprovados';
+import { FormprojetosPage } from '../formprojetos/formprojetos';
+import { ProjetosPage } from '../projetos/projetos';
 import { MenuinclusaoPage } from '../menuinclusao/menuinclusao';
 
 @Component({
@@ -17,8 +19,9 @@ export class TabsPage {
   tab2Root = MenuinclusaoPage;
   tab3Root = ComprasPage;
   tab4Root = AprovadosPage; 
-  tab5Root = BeneficiosPage; 
-  tab6Root = ChatPage; 
+  tab5Root = ProjetosPage; 
+  tab6Root = BeneficiosPage; 
+  tab7Root = ChatPage; 
 
 
   constructor(public noe: NoeProvider) {

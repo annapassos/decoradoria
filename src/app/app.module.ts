@@ -21,6 +21,8 @@ import { ChatPageModule } from '../pages/chat/chat.module';
 import { AprovadosPageModule } from '../pages/aprovados/aprovados.module';
 import { MenuinclusaoPageModule } from '../pages/menuinclusao/menuinclusao.module';
 import { EditarPageModule } from '../pages/editar/editar.module';
+import { ProjetosPageModule } from '../pages/projetos/projetos.module';
+import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.module';
 
 
 
@@ -46,6 +48,9 @@ import { EditarPageModule } from '../pages/editar/editar.module';
     BeneficiosPageModule,
     ChatPageModule,
     AprovadosPageModule,
+    EditarPageModule,
+    ProjetosPageModule,
+    FormprojetosPageModule,
     MenuinclusaoPageModule,
     EditarPageModule
   ],
