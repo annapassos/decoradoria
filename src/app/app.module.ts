@@ -24,7 +24,7 @@ import { EditarPageModule } from '../pages/editar/editar.module';
 import { ProjetosPageModule } from '../pages/projetos/projetos.module';
 import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.module';
 import { DetalheprojetoPageModule } from '../pages/detalheprojeto/detalheprojeto.module';
-
+ 
 
 
 @NgModule({
@@ -34,7 +34,6 @@ import { DetalheprojetoPageModule } from '../pages/detalheprojeto/detalheprojeto
     TabsPage,
     LoginPage,
     // BeneficiosPage,
-    // ChatPage,
 
   
   ],

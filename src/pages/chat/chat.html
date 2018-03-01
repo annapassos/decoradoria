@@ -4,6 +4,10 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+
+<!-- inicio firebase -->
+
 <ion-header>
 
   <ion-navbar color="azuldecor">
@@ -12,27 +16,20 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
-  <!-- //para chat -copiado do medium.com -->
-
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Mensagem</ion-label>
-      <ion-input type="text" [(ngModel)]="mensagem"></ion-input>
-    </ion-item>
-    <ion-item>
-      <button ion-button (click)="enviar()">Enviar</button>
-    </ion-item>
-    <ion-item *ngFor="let item of lista | async">
-      <p>{{item.texto}}</p>
-      <ion-note item-right>
-        {{item.data | date:'HH:mm'}}
-      </ion-note>
-    </ion-item>
-  </ion-list>
-
-  
-
-</ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Mensagem</ion-label>
+        <ion-input type="text" [(ngModel)]="mensagem"></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="enviar()">Enviar</button>
+      </ion-item>
+      <ion-item *ngFor="let item of lista | async">
+        <p>{{item.texto}}</p>
+        <ion-note item-right>
+          {{item.data | date:'HH:mm'}}
+        </ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-content>
