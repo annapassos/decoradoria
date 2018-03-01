@@ -4,6 +4,7 @@ import { NoeProvider } from '../../providers/noe/noe';
 import { DetalhePage } from '../detalhe/detalhe';
 import { HttpClient } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
+import { DetalheprojetoPage } from '../detalheprojeto/detalheprojeto';
 
 /**
  * Generated class for the ProjetosPage page.
@@ -35,15 +36,12 @@ export class ProjetosPage {
   }
 
 
-//   irParaDetalhe (opcao){
-//     let parametros = {
-//       opcaoQueFoiClicado: opcao
-//     };
+  irParaDetalheProjeto (opcao){
+     
+    let parametros = {
+       opcaoQueFoiClicado: opcao
+     };
     
-//     console.log("Chamando nova API")
-//     // this.mudarStatus(this.parametros)
-    
-    
-//     this.navCtrl.push(DetalhePage, parametros );
-//   }
+     this.navCtrl.push(DetalheprojetoPage, parametros );
+   }
 }

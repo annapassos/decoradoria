@@ -21,7 +21,7 @@ export class TabsPage {
   tab4Root = AprovadosPage; 
   tab5Root = ProjetosPage; 
   tab6Root = BeneficiosPage; 
-  tab7Root = ChatPage; 
+  // tab7Root = ChatPage; 
 
 
   constructor(public noe: NoeProvider) {

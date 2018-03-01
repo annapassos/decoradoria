@@ -23,6 +23,7 @@ import { MenuinclusaoPageModule } from '../pages/menuinclusao/menuinclusao.modul
 import { EditarPageModule } from '../pages/editar/editar.module';
 import { ProjetosPageModule } from '../pages/projetos/projetos.module';
 import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.module';
+import { DetalheprojetoPageModule } from '../pages/detalheprojeto/detalheprojeto.module';
 
 
 
@@ -52,7 +53,8 @@ import { FormprojetosPageModule } from '../pages/formprojetos/formprojetos.modul
     ProjetosPageModule,
     FormprojetosPageModule,
     MenuinclusaoPageModule,
-    EditarPageModule
+    EditarPageModule,
+    DetalheprojetoPageModule
   ],
   
   bootstrap: [IonicApp],

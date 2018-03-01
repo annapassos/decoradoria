@@ -1,4 +1,17 @@
 page-menuinclusao {
+
+  .button-md-light{
+    display: block;
+    width: 90%;
+    color: #000;
+    background-color: #f4f4f4;
+    margin: auto;
+    height: 50%;
+   }  
+
+   .mrg{
+     margin-top: 20px;
+   }
   
   .card-background-page {
     
@@ -8,7 +21,8 @@ page-menuinclusao {
       width: 85%;
       display: block;
       margin-top: 34px;
-      margin-left: auto;
+      margin-left: auto; 
+      background-color: rgb(196, 193, 193);
       margin-right: auto;
     }
     

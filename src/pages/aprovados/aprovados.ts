@@ -23,9 +23,13 @@ export class AprovadosPage {
   dados = {
     clienteId: ''
   };
+
+  valorFinal:any = 0;
+  valorFinal2 = 0;
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
     
+
     //   this.http.get('http://localhost:3001/apiitens').subscribe(
     //   (res) => {
     //     this.itens = res;
@@ -55,23 +59,26 @@ buscarAprovados (opcao){
         let valorTotal = preco * opcao.quantidade;
 
         opcao.valorTotal = 'R$ ' + valorTotal.toFixed(2).replace('.',',');
+        this.valorFinal = valorTotal + this.valorFinal;
+        
       }
     }
-    
     this.itens = dados;  
     console.log(this.itens)
+    this.valorFinal = 'R$ ' + this.valorFinal.toFixed(2).replace('.',',');
   });
+
 }
 
 
-irParaDetalhe (opcao){
-  let parametros = {
-    opcaoQueFoiClicado: opcao
-  };
+// irParaDetalheProjeto (opcao){
+//   let parametros = {
+//     opcaoQueFoiClicado: opcao
+//   };
   
   
-  this.navCtrl.push(DetalhePage, parametros );
-}
+//   this.navCtrl.push(DetalheprojeoPage, parametros );
+// }
 
 
 irParaEditar (opcao){

@@ -12,7 +12,9 @@ ion-label{
 
   }
 
-
+span{
+  float:right;
+}
 
 }
 .titulo1 {
@@ -25,6 +27,11 @@ ion-label{
   }
 
 
-// .titulo3 { 
-//   font-size: 15px;
-// }
+.titulo3 { 
+  border-color: gray;
+}
+
+.textoTotal{
+  color: grey;
+  font-size: 17px;
+}
