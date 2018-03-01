@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+// import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 
 /**
@@ -17,24 +17,24 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class ChatPage {
 
-  // para chat -copiado do medium.com
-  lista: FirebaselistObservable <any>;
-  mensagem: string;
+  // // para chat -copiado do medium.com
+  // lista: FirebaselistObservable <any>;
+  // mensagem: string;
 
 
-  constructor(public af: AngularFire) {
-    this.lista = af.database.list('https://chat-decoradoria.firebaseio.com/chat');
-  }
+  // constructor(public af: AngularFire) {
+  //   this.lista = af.database.list('https://chat-decoradoria.firebaseio.com/chat');
+  // }
 
-  enviar(){
-    let m = {
-      texto: this.mensagem,
-      data: new Date()
-    };
-    this.lista.push(m). then (() => {
-      this.mensagem ="";
-    });
-  }
+  // enviar(){
+  //   let m = {
+  //     texto: this.mensagem,
+  //     data: new Date()
+  //   };
+  //   this.lista.push(m). then (() => {
+  //     this.mensagem ="";
+  //   });
+  // }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatPage');
