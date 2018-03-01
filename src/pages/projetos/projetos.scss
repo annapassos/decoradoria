@@ -1,3 +1,19 @@
 page-projetos {
 
+    .titulo2{
+            font-size: 16px;
+            font-style: bold;
+            margin-top: 20px;
+          }
+        
+
+    .img{
+        display: block;
+        margin: auto;
+        width: 100% 
+    }
+
+    .large{
+        flex-basis: 25%;
+    }
 }
